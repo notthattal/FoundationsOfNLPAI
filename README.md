@@ -25,9 +25,6 @@ Content Object Structure:
 Request Example:
 
 ```json
-POST /chat
-Content-Type: application/json
-
 {
   "context": [
     {
