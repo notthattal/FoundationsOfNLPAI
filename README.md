@@ -94,9 +94,8 @@ python server.py
 ```
 5. (Optional) If you want to run tests:
 ```
-python test_server.py
+pytest tests/ --cov=.  -v
 ```
-* Note: To run tests for the backend, the backend must be running otherwise they will fail as we are testing the endpoints
 
 #### Frontend:
 
@@ -143,6 +142,15 @@ npm test
   * Verifies state updates and context management.
 
 * **Backend:**
-
-  * Tests endpoint responses and error handling.
-  * Validates response structure and error message format.
+  * test_chat_endpoint_valid_context - tests /chat endpoint with proper message format
+  * test_chat_endpoint_empty_context - tests /chat endpoint with empty context array
+  * test_chat_endpoint_no_context - tests /chat endpoint with missing context field
+  * test_chat_endpoint_invalid_json - tests /chat endpoint with malformed JSON (expects 400 error)
+  * test_options_endpoint - tests OPTIONS /chat endpoint for CORS preflight requests
+  * test_generate_response_success - tests normal AWS response with single text content
+  * test_generate_response_multiple_content - tests AWS response with multiple text items
+  * test_generate_response_empty_content - tests AWS response with empty content array
+  * test_generate_response_no_output - tests if AWS response is missing expected structure
+  * test_generate_response_exception - tests if the AWS service throws an exception
+  * test_generate_response_json_decode_error - tests if AWS returns invalid JSON
+  * test_chat_endpoint_integration - An end-to-end test with mocked AWS response
