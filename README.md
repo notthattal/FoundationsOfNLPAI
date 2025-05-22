@@ -96,6 +96,7 @@ python server.py
 ```
 python test_server.py
 ```
+* Note: To run tests for the backend, the backend must be running otherwise they will fail as we are testing the endpoints
 
 #### Frontend:
 
