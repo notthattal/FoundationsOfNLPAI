@@ -157,4 +157,4 @@ npm test
 
 ## AI Usage
 
-- AI was used as a source for documentation as well as with the creation of the test suite
+- AI was used as a source for documentation as well as to help with the creation of the test suite
