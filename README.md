@@ -155,6 +155,6 @@ npm test
   * test_generate_response_json_decode_error - tests if AWS returns invalid JSON
   * test_chat_endpoint_integration - An end-to-end test with mocked AWS response
 
-### AI Usage
+## AI Usage
 
 - AI was used as a source for documentation as well as with the creation of the test suite
